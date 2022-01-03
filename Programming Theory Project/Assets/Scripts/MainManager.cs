@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
-    public static MainManager Instance { get; private set; }
+    public int animalIndex { get; private set; }//ENCAPSULATION
+    public static MainManager Instance { get; private set; } //MORE ENCAPSULATION
     
     void Awake()
     {
@@ -18,10 +19,9 @@ public class MainManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AnimalChosen(int animalNumber)
     {
-        
+        animalIndex = animalNumber;
     }
 
     public void BackToMenu()
