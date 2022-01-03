@@ -8,12 +8,15 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine("AnimalSpawning");
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator AnimalSpawning()
     {
-        
+        while (true)
+        {
+            Instantiate(animals[InfoManager.Instance.animalIndex]);
+            yield return new WaitForSeconds(2);
+        }  
     }
 }

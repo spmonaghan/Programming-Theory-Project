@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3274375682735875752, guid: acf6ecdcdebeab748bf7f5ec1a013c4e, type: 3}
+  - {fileID: 7555734685904150863, guid: d16444cfb611aff4a8f2e3071c0ad6c3, type: 3}
+  - {fileID: 7514364622373010409, guid: ab6fb17c05af64243aaf279ae2aeb77d, type: 3}
 --- !u!4 &29961368
 Transform:
   m_ObjectHideFlags: 0

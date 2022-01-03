@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainManager : MonoBehaviour
+public class InfoManager : MonoBehaviour
 {
     public int animalIndex { get; private set; }//ENCAPSULATION
-    public static MainManager Instance { get; private set; } //MORE ENCAPSULATION
+    public static InfoManager Instance { get; private set; } //ENCAPSULATION
     
     void Awake()
     {
@@ -19,18 +19,17 @@ public class MainManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
     public void AnimalChosen(int animalNumber)
     {
         animalIndex = animalNumber;
     }
 
-    public void BackToMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-    public void LoadMainScene()
-    {
-        SceneManager.LoadScene(1);
-    }
 }
